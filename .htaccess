@@ -1,0 +1,24 @@
+# Document Encryption System - Security Configuration
+# Version 1.0
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive configuration and system files
+<FilesMatch "^(\.htaccess|\.htpasswd|\.env|.*\.ini|.*\.log)$">
+    Require all denied
+</FilesMatch>
+
+# Protect the main configuration file
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Set default character encoding
+AddDefaultCharset UTF-8
+
+# PHP upload and execution limits
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value memory_limit 128M

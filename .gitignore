@@ -1,0 +1,39 @@
+# Temporary uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# Encrypted temporary files
+encrypted/*
+!encrypted/.gitkeep
+
+# Decrypted temporary files
+decrypted/*
+!decrypted/.gitkeep
+
+# PHP logs
+*.log
+php_errors.log
+
+# Environment/configuration files
+.env
+.env.*
+!.env.example
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+*.swp
+*~
+
+# Test files
+test.txt
